@@ -37,7 +37,7 @@ Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
 Uploading and managing
 ----------------------
 
-Update the name of your Google App Engine application into `src/wrapper/app.yaml`.
+Update the name of your Google App Engine application at `src/wrapper/app.yaml`.
 
 To upload application files, run::
 
