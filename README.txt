@@ -1,13 +1,14 @@
 bfg-gae-buildout
 ================
 
-Buildouts repoze.bfg app on Google's App Engine.
+Buildouts repoze.bfg app onto Google's App Engine.
 
 This buildout has been inspired by and isn't possible without:
 
- * http://darrylcousins.blogspot.com/2010/01/repoze-bfg-on-google-app-engine.html
- * http://code.google.com/p/bridal/
- * http://code.google.com/p/appengine-monkey/
+  * http://darrylcousins.blogspot.com/2010/01/repoze-bfg-on-google-app-engine.html
+  * http://code.google.com/p/bridal/
+  * http://pypi.python.org/pypi/rod.recipe.appengine
+  * http://code.google.com/p/appengine-monkey/
 
 
 Testing the buildout out of the box
