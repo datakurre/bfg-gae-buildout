@@ -3,7 +3,7 @@ bfg-gae-buildout
 
 Buildouts repoze.bfg app on Google's App Engine.
 
-This buildout is has been inspired by and isn't possible without:
+This buildout has been inspired by and isn't possible without:
 
  * http://darrylcousins.blogspot.com/2010/01/repoze-bfg-on-google-app-engine.html
  * http://code.google.com/p/bridal/
