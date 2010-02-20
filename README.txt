@@ -27,7 +27,9 @@ Then access the application using a web browser with the following URL::
 Adding a custom application to the buildout
 -------------------------------------------
 
-Add your custom application egg into `buildout:eggs`.
+Replace 'myapp' with your own application at `buildout:eggs`.
+
+Update `src/wrapper/app.py` to launch your application instead of 'myapp'.
 
 Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
 
