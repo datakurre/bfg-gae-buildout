@@ -35,8 +35,8 @@ Update `src/wrapper/app.py` to launch your application instead of 'myapp'.
 Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
 
 
-Uploading and managing
-----------------------
+Deploying your application onto GAE
+----------------------------------
 
 Update the name of your Google App Engine application at `src/wrapper/app.yaml`.
 
