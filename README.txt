@@ -47,3 +47,18 @@ To upload application files, run::
 For a more detailed documentation follow this url::
 
   http://code.google.com/appengine/docs/python/tools/uploadinganapp.html
+
+
+Troubleshooting
+---------------
+
+Buildout fails with `Error: Couldn't install: foobar`.
+  Double check that you are using Python 2.5
+  
+Page request gives `ImportError: foobar`.
+  Dependencies for `repoze.bfg` may have been updated.
+  Try to update `${wrapper:packages}` on `buildout.cfg` with
+  missing packages and run buildout again.
+
+Page request gives `SAXReaderNotAvailable: No parsers found`.
+  Most probably, used Python has been built without Expat support.
