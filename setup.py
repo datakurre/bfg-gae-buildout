@@ -23,7 +23,6 @@ setup(name='wrapper', version=version,
   install_requires=[
     'setuptools',
     # -*- Extra requirements: -*-
-    'repoze.bfg',
     'myapp',
   ],
 )

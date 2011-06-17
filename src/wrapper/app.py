@@ -1,6 +1,6 @@
 # Monkeypatches to enable bfg.repoze within GAE
-import os; os.mkdir = None # GAE hasn't os.mkdir
-import appengine_monkey    # installed by buildout
+import os; os.mkdir = None  # GAE hasn't os.mkdir
+import appengine_monkey     # installed by buildout
 
 from google.appengine.ext.webapp.util import run_wsgi_app
 
