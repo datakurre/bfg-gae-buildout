@@ -1,7 +1,12 @@
-CHANGES
+Changes
 =======
 
-Version 1.0.0 (2010-02-20)
---------------------------
+1.1.0 (2011-06-17)
+------------------
+
+First version for pyramid.
+
+1.0.0 (2010-02-20)
+------------------
 
 First version, which hasn't beet tested much and most probably contains many problems.

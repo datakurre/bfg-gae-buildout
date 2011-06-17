@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
-import os
 
-version = '1.0'
+version = '1.0.0'
 
 setup(name='myapp', version=version,
   author='Asko Soukka',
   author_email='asko.soukka@iki.fi',
-  description="Repoze BFG Example.",
+  description="An example pyramid application.",
   long_description=open("README.txt").read() + "\n" +
                    open("CHANGES.txt").read(),
   license='GPL3',
@@ -22,6 +21,7 @@ setup(name='myapp', version=version,
   install_requires=[
     'setuptools',
     # -*- Extra requirements: -*-
-    'repoze.bfg'
+    'pyramid',
+    'pyramid_zcml'
   ],
 )

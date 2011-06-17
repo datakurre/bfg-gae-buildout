@@ -1,4 +1,4 @@
-# Monkeypatches to enable bfg.repoze within GAE
+# Monkeypatches to enable pyramid within GAE
 import os; os.mkdir = None  # GAE hasn't os.mkdir
 import appengine_monkey     # installed by buildout
 

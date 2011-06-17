@@ -1,7 +1,7 @@
 bfg-gae-buildout
 ================
 
-Buildouts repoze.bfg app onto Google's App Engine.
+Buildouts pyramid app onto Google's App Engine.
 
 This buildout has been inspired by and isn't possible without:
 
@@ -56,7 +56,7 @@ Buildout fails with `Error: Couldn't install: foobar`.
   Double check that you are using Python 2.5
   
 Page request gives `ImportError: foobar`.
-  Dependencies for `repoze.bfg` may have been updated.
+  Dependencies for `pyramid` may have been updated.
   Try to update `${wrapper:packages}` on `buildout.cfg` with
   missing packages and run buildout again.
 

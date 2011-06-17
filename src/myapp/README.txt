@@ -1,4 +1,4 @@
 MyApp
 =====
 
-A trivial repoze.bfg application.
+A trivial pyramid application.
