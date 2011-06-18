@@ -1,12 +1,17 @@
 Changes
 =======
 
+1.1.1 (2011-06-18)
+------------------
+
+- Updated readme and refactored sample app.
+
 1.1.0 (2011-06-17)
 ------------------
 
-First version for pyramid.
+- First pyramid release.
 
 1.0.0 (2010-02-20)
 ------------------
 
-First version, which hasn't beet tested much and most probably contains many problems.
+- Initial release.

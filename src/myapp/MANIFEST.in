@@ -1,0 +1,2 @@
+include *.py *.txt
+recursive-include myapp *.py *.zcml *.pt *.css *.ico *.txt

@@ -1,7 +1,13 @@
 Changes
 =======
 
-1.0.0 (2011-06-17)
+1.1.1 (2011-06-18)
 ------------------
 
-First version.
+- Refactored to be a better example.
+
+
+1.1.0 (2011-06-17)
+------------------
+
+- Initial pyramid release.

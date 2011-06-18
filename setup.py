@@ -22,7 +22,8 @@ setup(name='wrapper', version=version,
   zip_safe=False,
   install_requires=[
     'setuptools',
-    # -*- Extra requirements: -*-
+    # For rod.recipe.appengine to find the dependencies
+    # for our app, the app must be a requirement for the wrapper:s
     'myapp',
   ],
 )

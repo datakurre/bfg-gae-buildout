@@ -3,29 +3,24 @@
   <include package="pyramid_zcml"/>
 
   <view
-     for=".models.MyModel"
-     view=".views.my_view"
-     renderer="templates/main.pt"
-     />
+    context=".interfaces.IApplication"
+    name="favicon.ico"
+    view=".app.favicon"
+    />
 
   <view
-     name="favicon.ico"
-     view=".base.favicon"
-     />
+    context=".interfaces.IApplication"
+    name="robots.txt"
+    view=".app.robots"
+    />
 
   <view
-     name="robots.txt"
-     view=".base.robots"
-     />
+    context=".interfaces.IApplication"
+    view=".app.hello_world"
+    renderer="templates/hello_world.pt"
+    />
 
-  <static
-     name="css"
-     path="css"
-     />
-
-  <static
-     name="images"
-     path="images"
-     />
+  <static name="css" path="css"/>
+  <static name="images" path="images"/>
 
 </configure>
