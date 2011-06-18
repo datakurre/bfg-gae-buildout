@@ -3,12 +3,12 @@ bfg-gae-buildout
 
 Buildouts pyramid app onto Google's App Engine.
 
-This buildout has been inspired by and isn't possible without:
+This buildout has been inspired by:
 
-  * http://darrylcousins.blogspot.com/2010/01/repoze-bfg-on-google-app-engine.html
-  * http://code.google.com/p/bridal/
-  * http://pypi.python.org/pypi/rod.recipe.appengine
-  * http://code.google.com/p/appengine-monkey/
+* http://darrylcousins.blogspot.com/2010/01/repoze-bfg-on-google-app-engine.html
+* http://code.google.com/p/bridal/
+* http://pypi.python.org/pypi/rod.recipe.appengine
+* http://code.google.com/p/appengine-monkey/
 
 
 Testing the buildout out of the box
@@ -28,9 +28,9 @@ Then access the application using a web browser with the following URL::
 Adding a custom application to the buildout
 -------------------------------------------
 
-Replace 'myapp' with your own application at `buildout:eggs`.
+Replace 'myapp' with your own application at `buildout:eggs` and `setup.py.install_requires`.
 
-Update `src/wrapper/app.py` to launch your application instead of 'myapp'.
+Update `src/wrapper/app.py` to launch your application instead of *myapp*.
 
 Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
 
