@@ -9,7 +9,7 @@ from myapp.interfaces import IApplication
 from myapp.utils import SimpleResponse
 
 
-class Application(dict):
+class Application(object):
     """Application root"""
     implements(IApplication)
 
