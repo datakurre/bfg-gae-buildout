@@ -9,14 +9,15 @@ setup(name="myapp", version=version,
   long_description=open("README.txt").read() + "\n" +
                    open("HISTORY.txt").read(),
   license="GPL3",
-  # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+  # Get more strings from
+  # http://pypi.python.org/pypi?%3Aaction=list_classifiers
   keywords="",
   classifiers=[
     "Programming Language :: Python",
   ],
   url="",
   packages=find_packages(exclude=["ez_setup"]),
-  namespace_packages=[],  
+  namespace_packages=[],
   zip_safe=False,
   install_requires=[
     "setuptools",

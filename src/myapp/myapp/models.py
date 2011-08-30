@@ -3,5 +3,6 @@ class MyModel(object):
 
 root = MyModel()
 
+
 def get_root(request):
     return root

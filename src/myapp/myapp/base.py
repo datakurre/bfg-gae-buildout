@@ -2,6 +2,7 @@ from zope.interface import implements
 
 from repoze.bfg.interfaces import IResponse
 
+
 class SimpleResponse(object):
     """Faster than webob.Response"""
     # http://bfg.repoze.org/pastebin/684
@@ -15,7 +16,6 @@ class SimpleResponse(object):
         self.headerlist = [("Content-Type", content_type),
                            ("Content-Length", str(len(body)))]
 
-
     def __call__(self, environ, start_response):
         return self.app_iter
 
@@ -25,8 +25,10 @@ here = os.path.dirname(__file__)
 icon = open(os.path.join(here, "images/favicon.ico")).read()
 icon_response = SimpleResponse(icon, "image/x-icon")
 
+
 def favicon(context, request):
     return icon_response
+
 
 def robots(context, request):
     return SimpleResponse("")
