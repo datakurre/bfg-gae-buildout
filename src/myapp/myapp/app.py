@@ -38,4 +38,4 @@ def robots(context, request):
 
 
 def hello_world(context, request):
-    return { 'title': "Hello from pyramid!" }
+    return {"title": "Hello from pyramid!"}

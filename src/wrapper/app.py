@@ -7,10 +7,10 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 # Replace this with your own app
 from myapp import run
 
-if __name__ == '__main__':
-  settings = {
-    'reload_templates': True,
-    'debug_authorization': False,
-    'debug_notfound': True,
-  }
-  run_wsgi_app(run.wsgi_app())
+if __name__ == "__main__":
+    settings = {
+        "reload_templates": True,
+        "debug_authorization": False,
+        "debug_notfound": True,
+    }
+    run_wsgi_app(run.wsgi_app())
