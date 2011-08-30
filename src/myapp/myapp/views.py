@@ -1,4 +1,4 @@
 def my_view(context, request):
     return {
-        'title': "Hello from repoze.bfg!"
+        "title": "Hello from repoze.bfg!"
     }

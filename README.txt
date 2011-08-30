@@ -28,7 +28,8 @@ Then access the application using a web browser with the following URL::
 Adding a custom application to the buildout
 -------------------------------------------
 
-Replace 'myapp' with your own application at `buildout:eggs` and `setup.py.install_requires`.
+Replace 'myapp' with your own application at `buildout:eggs` and
+`setup.py.install_requires`.
 
 Update `src/wrapper/app.py` to launch your application instead of *myapp*.
 
@@ -36,9 +37,10 @@ Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
 
 
 Deploying your application onto GAE
-----------------------------------
+-----------------------------------
 
-Update the name of your Google App Engine application at `src/wrapper/app.yaml`.
+Update the name of your Google App Engine application at
+`src/wrapper/app.yaml`.
 
 To upload application files, run::
 
@@ -54,11 +56,11 @@ Troubleshooting
 
 Buildout fails with `Error: Couldn't install: foobar`.
   Double check that you are using Python 2.5
-  
+
 Page request gives `ImportError: foobar`.
-  Dependencies for `repoze.bfg` may have been updated.
-  Try to update `${wrapper:packages}` on `buildout.cfg` with
-  missing packages and run buildout again.
+  Dependencies for `repoze.bfg` may have been updated.  Try to update
+  `${wrapper:packages}` on `buildout.cfg` with missing packages and run
+  buildout again.
 
 Page request gives `SAXReaderNotAvailable: No parsers found`.
   Most probably, used Python has been built without Expat support.
