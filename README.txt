@@ -34,21 +34,22 @@ Then access the application using a web browser with the following URL::
 Using the buildout with your application
 ----------------------------------------
 
-At first, take a look at *myapp* example. Besides minimal WSGI-wrapper at ``run.py``, it has completely no idea, that it would be run on GAE.
+At first, take a look at *myapp* example. Besides minimal WSGI-wrapper at
+``run.py``, it has completely no idea, that it would be run on GAE.
 
-Replace *myapp* with your own application package at ``buildout:eggs`` and ``setup.py.install_requires``. These steps are required for ``rod.recipe.appengine`` to be able to find our requirement packages.
+Replace *appname*, *appspotname* and *appspotversion* in the beginning of
+``buildout.cfg`` with your application specific ones.
 
-Update ``src/wrapper/app.py`` to launch your application instead of *myapp*. This step is required for our wrapper to launch our app as as WSGI-application.
+Take care that setuptools will find our application files. This is usually done
+by setuptools' SVN, Mercurial, etc... integration, but you may also define
+included files explicitly in your package's ``MANIFEST.in``.
 
-Take care that setuptools will find our application files. This is usually done by setuptools' SVN, Mercurial, etc... integration, but you may also define included files explicitly in your package's ``MANIFEST.in``.
-
-Just in case, run ``buildout`` with ``rm .installed.cfg && bin/buildout``. It seems, ``rod.recipe.appengine`` doesn't support buildout's update very well.
+Just in case, run ``buildout`` with ``rm .installed.cfg && bin/buildout``. It
+seems, ``rod.recipe.appengine`` doesn't support buildout's update very well.
 
 
 Deploying your application onto GAE
 -----------------------------------
-
-Update the name of your Google App Engine application at ``src/wrapper/app.yaml``. This step is required for GAE-script to know, which onto which GAE-instance to deploy.
 
 To upload application files, run::
 
@@ -64,11 +65,11 @@ Troubleshooting
 
 Buildout fails with ``Error: Couldn't install: foobar``.
   Double check that you are using Python 2.5
-  
+
 Page request gives ``ImportError: ...``.
   Dependencies for ``pyramid`` may have been updated.
   Try to update ``${wrapper:packages}`` on ``buildout.cfg`` with
-  missing packages and run buildout again.
+  missing packages and run ``rm .installed && bin/buildout`` again.
 
 Page request gives ``SAXReaderNotAvailable: No parsers found``.
   Most probably, used Python has been built without Expat support.
