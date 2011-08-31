@@ -25,22 +25,25 @@ Then access the application using a web browser with the following URL::
   http://localhost:8080/
 
 
-Adding a custom application to the buildout
--------------------------------------------
+Using the buildout with your application
+----------------------------------------
 
-Replace 'myapp' with your own application at `buildout:eggs` and
-`setup.py.install_requires`.
+At first, take a look at *myapp* example. Besides minimal WSGI-wrapper at
+``run.py``, it has completely no idea, that it would be run on GAE.
 
-Update `src/wrapper/app.py` to launch your application instead of *myapp*.
+Replace *appname*, *appspotname* and *appspotversion* in the beginning of
+``buildout.cfg`` with your application specific ones.
 
-Just in case, run `buildout` with `rm .installed.cfg && bin/buildout`.
+Take care that setuptools will find our application files. This is usually done
+by setuptools' SVN, Mercurial, etc... integration, but you may also define
+included files explicitly in your package's ``MANIFEST.in``.
+
+Just in case, run ``buildout`` with ``rm .installed.cfg && bin/buildout``. It
+seems, ``rod.recipe.appengine`` doesn't support buildout's update very well.
 
 
 Deploying your application onto GAE
 -----------------------------------
-
-Update the name of your Google App Engine application at
-`src/wrapper/app.yaml`.
 
 To upload application files, run::
 
@@ -62,5 +65,5 @@ Page request gives `ImportError: foobar`.
   `${wrapper:packages}` on `buildout.cfg` with missing packages and run
   buildout again.
 
-Page request gives `SAXReaderNotAvailable: No parsers found`.
+Page request gives ``SAXReaderNotAvailable: No parsers found``.
   Most probably, used Python has been built without Expat support.
