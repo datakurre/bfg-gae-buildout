@@ -8,7 +8,7 @@ if hasattr(os, "__loader__"):
 from google.appengine.ext.webapp.util import run_wsgi_app
 
 # Replace this with your own app
-from myapp import run
+from ${buildout:appname} import run
 
 if __name__ == "__main__":
     settings = {
