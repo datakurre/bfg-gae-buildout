@@ -1,6 +1,9 @@
-# Monkeypatches to enable repoze.bfg within GAE
-import os; os.mkdir = None  # GAE hasn't os.mkdir
-import appengine_monkey     # installed by buildout
+# Monkeypatches to enable pyramid within GAE
+import os; os.mkdir = None  # GAE has no os.mkdir
+import pkg_resources  # Fixes "pkg_resources" is not defined error on SDK
+if hasattr(os, "__loader__"):
+    pkg_resources.register_loader_type(
+        type(os.__loader__), pkg_resources.DefaultProvider)
 
 from google.appengine.ext.webapp.util import run_wsgi_app
 
