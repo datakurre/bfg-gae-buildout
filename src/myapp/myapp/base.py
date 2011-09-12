@@ -17,7 +17,12 @@ class SimpleResponse(object):
                            ("Content-Length", str(len(body)))]
 
     def __call__(self, environ, start_response):
-        return self.app_iter
+        """WSGI application interface"""
+        start_response(self.status, self.headerlist)
+        if environ["REQUEST_METHOD"] == "HEAD":
+            return []
+        else:
+            return self.app_iter
 
 
 import os
